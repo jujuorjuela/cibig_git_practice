@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 
+## Recovery three notes given by user
 note1 = input("Donner une note : ")
 note2 = input("Donner une note : ")
 note3 = input("Donner une note : ")
@@ -7,7 +8,7 @@ note3 = input("Donner une note : ")
 # Penser a convertir les arguments en entiers avant de calculer la moyenne
 moyenne = (float(note1)+float(note3)+float(note2))/3
 
-print(f"La moyenne est {moyenne}")
+print(f"La moyenne est egale à : {moyenne}")
 
 # Trois façon de faire l'affichage de la mention
 
@@ -15,15 +16,15 @@ print(f"La moyenne est {moyenne}")
 # on part de la plus petite car seul le bloc de la première condition vraie
 # sera exécuté
 if moyenne < 10:
-	print("ajournée")
+	print("Ajournée")
 elif moyenne < 12:
-	print("passable")
+	print("Passable")
 elif moyenne < 14:
-	print("AB")
+	print("Assez Bien")
 elif moyenne < 16:
-	print("B")
+	print("Bien")
 else:
-	print("TB")
+	print("Tres Bien")
 
 # Méthode 2 : On utilise le 'and' logique pour vérifier qu'on est assez haut et
 # pas trop haut
@@ -51,17 +52,3 @@ else :
 	print("TB")
 
 
-# Méthode 4 : ifs imbriqués
-if moyenne < 10:
-    print("Ajourné")
-else:
-    if not moyenne >= 12:
-        print("Passable")
-    else:
-        if not moyenne >= 14:
-            print("AB")
-        else:
-            if not moyenne >= 16:
-                print("B")
-            else:
-                print("TB")
